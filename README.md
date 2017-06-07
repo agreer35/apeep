@@ -110,7 +110,35 @@ all this should work, with no warning.
 
 At this point, the only documentation is reading the code itself. The variable names in `process.py` should be self-explanatory though.
 
+## Install and Run on Windows
 
+An easy way is to install [Acaconda Python](https://www.continuum.io/downloads/), which includes many libraries that are useful for a variety of python applications.
+
+Then go to this [website](http://www.lfd.uci.edu/~gohlke/pythonlibs/#opencv) and download the .whl file for python 2.7 for your operating system.
+
+Open the Sypder IDE, and in the command line, change the working directory to the location of the .whl file
+
+    print os.getcwd()
+    os.chdir("C:\\Users\\Documents\\Python Scripts\\opencv-location")
+    
+Install the .whl file by typing this into the command line
+
+    pip install opencv_python-2.4.13.2-cp27-cp27m-win_amd64
+    
+Open the process.py file from the apeep directory in Sypder. Under the "options" section of the code, type this to import relevant libraries and change the working directory to the apeep master.
+
+    import numpy
+    import skimage
+    import matplotlib
+    import cv2
+    import os
+    print os.getcwd()
+    os.chdir("C:\\Users\\Documents\\Python Scripts\\apeep-master")
+    
+Open the conf.py file and change th input and output directories. Make sure to use "\\" throughout all paths in the process.py and conf.py files.
+
+Once all of the relevant directories are changed, run the process.py file to segment the .avi files in the input directory.
+    
 ## Credits
 
 ISIIS is developed by [Robert K Cowen](http://ceoas.oregonstate.edu/profile/cowen/) ([Rosenstiel School of Marine and Atmospheric Sciences](http://www.rsmas.miami.edu/) RSMAS, University of Miami and [Hatfield Marine Science Center](http://hmsc.oregonstate.edu), Oregon State University) and [Cédric Guigand](http://yyy.rsmas.miami.edu/groups/larval-fish/cedric.html) ([RSMAS](http://www.rsmas.miami.edu)) in partnership with [BellaMare](http://www.bellamare-us.com).
